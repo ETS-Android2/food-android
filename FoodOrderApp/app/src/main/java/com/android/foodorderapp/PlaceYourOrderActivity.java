@@ -101,12 +101,12 @@ public class PlaceYourOrderActivity extends AppCompatActivity {
             subTotalAmount += m.getPrice() * m.getTotalInCart();
         }
 
-        tvSubtotalAmount.setText("$"+String.format("%.2f", subTotalAmount));
+        tvSubtotalAmount.setText(String.format("%.2f", subTotalAmount)+"T");
         if(isDeliveryOn) {
-            tvDeliveryChargeAmount.setText("$"+String.format("%.2f", restaurantModel.getDelivery_charge()));
+            tvDeliveryChargeAmount.setText(String.format("%.2f", restaurantModel.getDelivery_charge())+"T");
             subTotalAmount += restaurantModel.getDelivery_charge();
         }
-        tvTotalAmount.setText("$"+String.format("%.2f", subTotalAmount));
+        tvTotalAmount.setText(String.format("%.2f", subTotalAmount)+"T");
     }
 
     private void onPlaceOrderButtonClick(RestaurantModel restaurantModel) {
